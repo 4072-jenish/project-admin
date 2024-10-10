@@ -86,8 +86,9 @@ header:last-child li a i{
     background-color: #f3f6fa;
     padding: 10px 15px;
 }
-.menu-icon{
+.menu-icon a i{
     font-size: 30px;
+    color: #242e3d;
 }
 .serch-icon{
     background-color: #f3f6fa;
@@ -101,10 +102,10 @@ header:last-child li a i{
     font-family: 'Signika';
     color: var(--titles);
 }
-.mega-menu p{
+.mega-menu a{
     margin-right: 8px;
     font-family: 'Signika';
-
+    color: rgb(171 176 183);
 }
 
 
@@ -140,6 +141,9 @@ aside{
     top: 0;
     bottom: 0;
     left: 0;
+}
+aside ul li{
+    width: 100%;
 }
 .logo{
     display: flex;
@@ -181,7 +185,12 @@ aside{
     font-size: 18/px;
     color: #adb5bd;
 }
-.pages li{
+
+
+.components{
+    margin-top: 10px;
+}
+.components li{
     font-size: 16px;
     color: rgb(171 176 183);
     font-family: 'Signika'; 
@@ -189,29 +198,103 @@ aside{
     display: flex;
     justify-content: space-between;
 }
-.pages li a{
+.components li a{
     font-size: 16px;
     color: rgb(171 176 183);
     font-family: 'Signika'; 
 }
-.pages li:nth-child(2) a{
-    color: #fff;
-}
-.pages li i{
+.components li i{
     margin-right: 10px;
 }
-.pages li:first-child{
+.components li:first-child{
+    font-size: 12px;
+    color: rgb(171 176 183);
+    font-family: 'Signika';
+}
+.components span{
+    margin-left: 5px;
+    color: #242e3d;
+    padding: 3px 5px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'Dosis';
+    font-weight: 600;
+}
+
+.plugins{
+    margin-top: 10px;
+    
+}
+.plugins li{
+    font-size: 16px;
+    color: rgb(171 176 183);
+    font-family: 'Signika'; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.plugins li a{
+    font-size: 16px;
+    color: rgb(171 176 183);
+    font-family: 'Signika'; 
+}
+.plugins li i{
+    margin-right: 10px;
+}
+.plugins li:first-child{
     font-size: 12px;
     color: rgb(171 176 183);
     font-family: 'Signika';
     font-weight: 800;
 }
-.pages span{
+.plugins span{
     margin-left: 5px;
     color: white;
-    padding: 0px 7px;
+    padding: 3px 5px;
     background-color: var(--promary);
     border-radius: 5px;
+    font-size: 12px;
     font-family: 'Dosis';
     font-weight: 600;
+}
+
+
+
+.weekly-sales{
+    padding: 26px;
+    margin: 28px;
+    border-radius: 5px;
+    background-color: #2b3947;
+}
+.weekly-sales h6{
+    font-size: 14px;
+    font-family: 'Signika'; 
+    color: white;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.weekly-sales p{
+    font-size: 12px;
+    font-family: 'Signika'; 
+    color: #adb5bd;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.weekly-sales a{
+    text-align: center;
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-family: 'Signika'; 
+    color: var(--promary);
+    font-weight: 500;
+    border: 1px solid var(--promary);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.weekly-sales a:hover{
+    background-color: var(--promary);
+    border: none;
+    color: white;
 }
