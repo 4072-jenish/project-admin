@@ -20,7 +20,6 @@ ul
 }
 a{
     text-decoration: none;
-    display: inline-block;
 }
 .col-1{width: 8.33%; padding-left: 12px;padding-right: 12px;}
 .col-2{width: 16.66%; padding-left: 12px;padding-right: 12px;}
@@ -47,6 +46,31 @@ a{
     max-width: 100%;
     display: inline-block;
 }
+.justify-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+.d-flex{
+    display: flex;
+}
+.relative{
+    position: relative;
+}
+.d-block{
+    display: block;
+ }
+ .d-none{
+     display: none;
+ }
+
+ body{
+    font-family: 'Signika';
+
+ }
+
+ 
 /* HEADER */
 
 
@@ -60,6 +84,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
+
 
 header ul{
     display: flex;
@@ -123,178 +148,152 @@ header:last-child li a i{
 
 
 
-main{
+main{  
+     background-color: #F5F7FB;
      width: 85%;
-     margin-left: auto;    
+     padding: 120px 50px 50px 50px;
+     margin-left: auto;
 }
 
 
 
 
 
-
-aside{
+aside::-webkit-scrollbar {
+    width: .8rem;
+}
+aside::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+aside::-webkit-scrollbar-thumb {
+    background-color: #adb5bd;
+    border-radius: 10px;
+} 
+aside {
     width: 15%;
-    background-color: #242e3d;
     position: fixed;
-    overflow-y: scroll;
     top: 0;
-    bottom: 0;
     left: 0;
-}
-aside ul li{
-    width: 100%;
+    bottom: 0;
+    overflow-y: scroll;
+    background-color: #222e3c;
+    color: white;
 }
 .logo{
-    display: flex;
-    padding: 25px 20px;
-}
-
-.logo a{
-    font-size: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
     color: white;
+    font-size: 22px;
     font-weight: 500;
-    font-family: 'Signika';
-
 }
-.logo span{
-    margin-left: 5px;
-    color: white;
-    padding: 0px 7px;
-    background-color: var(--promary);
-    border-radius: 5px;
-    transform: translateY(-10px);
-    font-family: 'Dosis';
-    font-weight: 600;
-}
-.profile{
-    display: flex; 
-    padding: 15px 20px
-}
-.profile-info{
-    margin-left: 10px;
-}
-.profile-info span{
-    font-family: 'Dosis';
-    font-size: 18px;
-    color: #fff;
-    display: flex;
-}
-.profile-info p{
-    font-family: 'Dosis';
-    font-size: 18/px;
-    color: #adb5bd;
-}
-
-
-.components{
-    margin-top: 10px;
-}
-.components li{
-    font-size: 16px;
-    color: rgb(171 176 183);
-    font-family: 'Signika'; 
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.components li a{
-    font-size: 16px;
-    color: rgb(171 176 183);
-    font-family: 'Signika'; 
-}
-.components li i{
-    margin-right: 10px;
-}
-.components li:first-child{
-    font-size: 12px;
-    color: rgb(171 176 183);
-    font-family: 'Signika';
-}
-.components span{
-    margin-left: 5px;
-    color: #242e3d;
-    padding: 3px 5px;
-    background-color: white;
-    border-radius: 5px;
-    font-size: 12px;
-    font-family: 'Dosis';
-    font-weight: 600;
-}
-
-.plugins{
-    margin-top: 10px;
+aside .logo a{
+   color: white;
     
 }
-.plugins li{
-    font-size: 16px;
-    color: rgb(171 176 183);
-    font-family: 'Signika'; 
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
+aside > ul{
+    margin:10px;
 }
-.plugins li a{
-    font-size: 16px;
-    color: rgb(171 176 183);
-    font-family: 'Signika'; 
+.user-data{
+    margin-left: 10px;
 }
-.plugins li i{
-    margin-right: 10px;
-}
-.plugins li:first-child{
-    font-size: 12px;
-    color: rgb(171 176 183);
-    font-family: 'Signika';
-    font-weight: 800;
-}
-.plugins span{
-    margin-left: 5px;
+.user-data a{
     color: white;
-    padding: 3px 5px;
-    background-color: var(--promary);
+}
+.user-data p{
+    color: #adb5bd;
+    font-size: 16px;
+}
+.page > ul > li:nth-child(2){
+    background: linear-gradient(90deg, rgba(59, 125, 221, .1), rgba(59, 125, 221, .088) 50%, transparent);
+    border-left: 2px solid #3b7ddd;
+    color: #e9ecef;
+}
+.pro, .icon{
     border-radius: 5px;
+    padding: 4px ;
     font-size: 12px;
-    font-family: 'Dosis';
-    font-weight: 600;
+    font-weight: 400;
+}
+.pro{
+    background-color: #3b7ddd; 
+    color: white;
+}
+.icon{
+    background-color: white;  
+    color: black;
+}
+.logo span{
+    background-color: #3b7ddd; 
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    transform: translateY(-8px);
+    display: inline-block;
+}
+.component{
+    margin: 20px 0px;
+}
+h4{
+    color: white;
+}
+.page ul li:nth-child(2) a{
+    color: white;
+    font-size: 16px;
+}
+.page ul li:nth-child(2) , .component ul li:nth-child(2) p, .plugins ul li:nth-child(2) p{
+    font-size: 16px;
+     color: #adb5bd;
 }
 
+.page ul li, .component ul li, .plugins ul li{
+    color: #adb5bd;
+     padding: 6px 0px 6px 8px;
+     margin-right: 5px;
+    margin-left: 3px;
+}
+.page ul li:hover, .component ul li:hover, .plugins ul li:hover{
+    color: #dbe3eb;
+    
+}
+.page ul li:nth-child(2) a ul li{
+    color:  white;
+}
+.page span, .component span, .plugins span{
+    margin-left: 10px;
+}
 
 
 .weekly-sales{
-    padding: 26px;
-    margin: 28px;
-    border-radius: 5px;
+    margin: 22px;
+    padding: 14px;
     background-color: #2b3947;
 }
-.weekly-sales h6{
+
+.weekly-sales h5{
     font-size: 14px;
-    font-family: 'Signika'; 
-    color: white;
-    font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    margin-right: 5px;
+
 }
 .weekly-sales p{
-    font-size: 12px;
-    font-family: 'Signika'; 
-    color: #adb5bd;
-    font-weight: 500;
-    margin-bottom: 5px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    margin-right: 5px;
 }
 .weekly-sales a{
+    display:inline-block;
     text-align: center;
-    width: 100%;
-    padding: 5px 15px;
-    font-size: 14px;
-    font-family: 'Signika'; 
-    color: var(--promary);
-    font-weight: 500;
-    border: 1px solid var(--promary);
-    border-radius: 5px;
-    transition: 0.5s;
+    border-radius: 3px;
+    display: block;
+    padding: 5px;
+    border: 2px solid #3b7ddd;
+    color: #3b7ddd;
 }
 .weekly-sales a:hover{
-    background-color: var(--promary);
-    border: none;
+    background-color: #3b7ddd;
     color: white;
 }
