@@ -38,8 +38,6 @@ a{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: 12px;
-    margin-right: 12px;
 }
 
 .img-fluid{
@@ -83,6 +81,7 @@ header{
     width: 85%;
     display: flex;
     justify-content: space-between;
+    box-shadow: rgba(33, 37, 41, 0.1) 0px 0px 32px 0px;
 }
 
 
@@ -154,22 +153,87 @@ main{
      padding: 120px 50px 50px 50px;
      margin-left: auto;
 }
-.analytics-cards{
-
+.analytics-title{
+    margin-bottom: 20px;
 }
+.analytics-title ul li h3{
+    font-weight: 400;
+    line-height: 25.2px;
+    font-size: 21px;
+}
+.analytics-title ul li:last-child a:first-child{
+    padding: 8px 15px;
+    color: rgb(52, 58, 64);
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.analytics-title ul li:last-child a:last-child{
+    padding: 8px 13px;
+    color: #fff;
+    background-color: var(--promary);
+    border-radius: 5px;
+}
+
+.analytics-cards{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 .875rem 0 rgba(33, 37, 41, .05);
+    margin-bottom: 24px;
+}
+.analytics-cards .row{
+    padding: 0 !important;
+}
+.analytics-icon{
+    padding: 10px 12px;
+    background-color: #d3e2f7;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--promary);
+}
+
 .analytics-cards ul li:first-child h6{
     color: #939ba2;
     font-size: .925rem;
     font-weight: 600;
 }
-.analytics-icon{
-    padding: 5px;
-    background-color: #d3e2f7;
-    border-radius: 15px;
+.analytics-cards h3{
+    color: #000;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 4px 0 16px 0;
+}
+.analytics-cards p{
+    color: #5d666e;
+    font-size: 15px;
+    /* opacity: 0.5; */
+}
+.analytics-cards p span{
+    color: #3b7ddd;
+    background-color: #3b7ddd26;
+    padding: 3px 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.col-6:nth-child(2) .analytics-cards p span{
+    color: #1cbb8c;
+    background-color: rgba(28, 187, 140, .15);
+}
+.col-6:nth-child(3) .analytics-cards p span{
+    color: #1cbb8c;
+    background-color: rgba(28, 187, 140, .15);
+}
+.col-6:last-child .analytics-cards p span{
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, .15);
+
 }
 
-
-
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 0.001s;
+}
 
 aside::-webkit-scrollbar {
     width: .8rem;
@@ -248,7 +312,8 @@ aside > ul{
     margin: 20px 0px;
 }
 h4{
-    color: white;
+    font-size: 15px;
+    font-weight: 300;
 }
 .page ul li:nth-child(2) a{
     color: white;
@@ -308,4 +373,9 @@ h4{
 .weekly-sales a:hover{
     background-color: #3b7ddd;
     color: white;
+    border: none;
+    background-image: none;
+}
+.answer a ul li:first-child span , .answer a ul li:first-child i{
+    color: #adb5bd;
 }
