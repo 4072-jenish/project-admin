@@ -154,7 +154,19 @@ main{
      padding: 120px 50px 50px 50px;
      margin-left: auto;
 }
+.analytics-cards{
 
+}
+.analytics-cards ul li:first-child h6{
+    color: #939ba2;
+    font-size: .925rem;
+    font-weight: 600;
+}
+.analytics-icon{
+    padding: 5px;
+    background-color: #d3e2f7;
+    border-radius: 15px;
+}
 
 
 
