@@ -689,13 +689,15 @@
     
     <main>
        
-     <ul class="row">
-      <li><h1>Analytics Dashboard</h1></li>
-      <li>
-        <a href="javascript:void(0)">Analytics Dashboard</a>
-        <a href="javascript:void(0)">New Project</a>
-      </li>
-    </ul>
+    <div class="analytics-title">
+  <ul class="row ">
+    <li><h3><strong>Analytics</strong> Dashboard</h3></li>
+    <li>
+      <a href="javascript:void(0)">Invite a fraind</a>
+      <a href="javascript:void(0)">New Project</a>
+    </li>
+  </ul>
+    </div>
 
     <div class="analytics">
       <div class="row">
@@ -707,11 +709,44 @@
                     <li><h6>Sales</h6> </li>
                     <li class="analytics-icon"><i class="ri-truck-line"></i></li>
                  </ul>
+                 <h3>2.382</h3>
+                 <p><span>-3.65%</span>Since last week</p>
+               </div>
+            </div>
+            <div class="col-6">
+                <div class="analytics-cards">
+                 <ul class="row">
+                    <li><h6>Earnings</h6> </li>
+                    <li class="analytics-icon"><i class="ri-money-dollar-circle-line"></i></li>
+                 </ul>
+                 <h3>$21.300</h3>
+                 <p><span>6.65%</span>Since last week</p>
+               </div>
+            </div>
+            <div class="col-6">
+                <div class="analytics-cards">
+                 <ul class="row">
+                    <li><h6>Sales</h6> </li>
+                    <li class="analytics-icon"><i class="ri-group-line"></i></li>
+                 </ul>
+                 <h3>14.212</h3>
+                 <p><span>5.25%</span>Since last week</p>
+               </div>
+            </div>
+            <div class="col-6">
+                <div class="analytics-cards">
+                 <ul class="row">
+                    <li><h6>Sales</h6> </li>
+                    <li class="analytics-icon"><i class="ri-shopping-cart-line"></i></li>
+                 </ul>
+                 <h3>64</h3>
+                 <p><span>-2.25%</span>Since last week</p>
                </div>
             </div>
           </div>
         </div>
         <div class="col-7"> 
+          <canvas id="chartjs-dashboard-line" width="850" height="250" style="display: block; width: 850px; height: 250px;" class="chartjs-render-monitor"></canvas>
         </div>
       </div>
     </div>
