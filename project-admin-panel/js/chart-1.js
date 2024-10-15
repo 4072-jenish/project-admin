@@ -4,7 +4,7 @@ var options = {
     data: [61, 30, 50, 40, 70, 60, 100]
   },],
     chart: {
-    height: 350,
+    height: 255,
     type: 'area'
   },
   dataLabels: {
