@@ -236,6 +236,7 @@ main{
 .analytics-item{
     background-color: #fff;
     margin-left: 10px;
+    box-shadow: 0 0 .875rem 0 rgba(33, 37, 41, .05);
     padding: 15px;  
 }
 #chart-1{
@@ -301,7 +302,7 @@ main{
   .calendar-day {
     text-align: center;
     color: #525659;
-    padding: 20px;
+    padding: 10px;
   }
   
   .calendar-month-arrow-container {
@@ -410,6 +411,9 @@ main{
     .australia { top: 72%; left: 86%; }
   }
   
+#chart-2{
+    height: 500px;
+}
 
 
 
