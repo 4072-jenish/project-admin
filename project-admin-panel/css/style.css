@@ -64,7 +64,7 @@ a{
 
  body{
     font-family: 'Signika';
-
+    position: relative;
  }
 
  
@@ -81,6 +81,7 @@ header{
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(33, 37, 41, 0.1) 0px 0px 32px 0px;
+    z-index: 999;
 }
 
 
@@ -103,22 +104,24 @@ header:last-child li a i{
      color: var(--titles);
 }
 
-.serch-bar-header{
-    border-radius: 30px 0 0 30px;
+header input{
+    border-radius: 30px ;
     border: none;
     background-color: #f3f6fa;
     padding: 10px 15px;
+    position: relative;
 }
 .menu-icon a i{
     font-size: 30px;
     color: #242e3d;
 }
-.serch-icon{
-    background-color: #f3f6fa;
-    border-radius: 0 30px 30px 0;
-    padding: 10px 15px;
+.ri-search-line{
+    position: absolute;
+    top: 0;
+    right: 15px;
     color: var(--titles);
-}
+
+}   
 .mega-menu{
     display: flex;
     align-items: center;
@@ -471,6 +474,12 @@ main{
     padding: 8px 10px;
     background-color: rgb(245, 247, 251);
     border-radius: 5px;
+    color: #525659;
+    transition: 0.2s;
+}
+.analytics-item table tr td a:hover{  
+      background-color: rgb(201, 202, 204);
+
 }
 .analytics-item table tr td p{
     color: #2b3947;
@@ -500,6 +509,7 @@ main{
      height: 100%;
      border-radius: 5px 0 0 5px;
 }
+
 
 
 aside::-webkit-scrollbar {
@@ -675,3 +685,47 @@ h4{
  .blue-bg{
      background-color: #dee9f9;
  }
+
+ footer{
+    width: 85%;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    margin-left: auto;
+    padding: 16px 14px 
+    ;
+ }
+footer ul li:first-child A{
+    color: rgba(73, 80, 87, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+}
+footer ul li:last-child a{
+    color: rgba(73, 80, 87, 0.75);
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+
+
+.bottom-to-top{
+    padding: 15px 15px;
+    border-radius: 50%;
+    background-color: var(--promary);
+    color: white;
+    display: inline-block;
+    bottom: 30px;
+    right: 30px;
+    position: absolute;
+    position: fixed;
+}
+.bottom-to-top a{
+    color: white;
+}
+
+
+
+#SvgjsText4958{
+    display: none;
+}
