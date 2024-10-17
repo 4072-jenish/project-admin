@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --promary: #3b7ddd;
+    --titles:  #939ba2;
+
+  
+}
+
+ul
+{
+    list-style: none;
+}
+
+
+body{
+    font-family: 'Signika';
+    background-color: #f5f7fb;
+}
+
+
+a{
+    text-decoration: none;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main{
+    max-width: 481px;
+    padding: 0 12px;
+    margin: 140px auto;
+}
+.title{
+    text-align: center;
+}
+.title h1{
+    font-size: 26px;
+    font-weight: 400;
+}
+.title p{
+    color: rgb(73, 80, 87);
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.main-form{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+     box-shadow: 0 0 .875rem 0 rgba(33, 37, 41, .05);
+}
+.top-button a:first-child{
+    background-color: #dc4e41;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 6px 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    transition: 0.2s;
+}
+.top-button a:first-child:hover{
+    background-color: #a73c33;
+}
+.top-button a:nth-child(2){
+    background-color: rgb(59, 89, 152);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 6px 16px;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+.top-button a:nth-child(2):hover{
+    background-color: rgb(44, 67, 117);
+}
+.top-button a:last-child{
+    background-color: rgb(47, 47, 47);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 6px 16px;
+    border-radius: 5px; 
+}
+.devide{
+    margin-top: 16px;
+    align-items: center;
+}
+.devide div{
+    width: 40%;
+    height: 1px;
+    background-color: #939ba2;
+}
+.devide p{
+    color: rgb(73, 80, 87);
+}
+
+
+.name{
+    margin-bottom: 16px;
+
+}
+.name label{
+    display: block;
+    color: rgb(73, 80, 87, 0.8);
+    margin-bottom: 10px;
+}
+.name input{
+    display: block;
+    width: 100%;
+    border:1px solid rgb(73, 80, 87, 0.3 );
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.name input:focus{
+    background-color: #fff;
+    border-color: #9dbeee;
+    box-shadow: 0 0 0 .25rem rgba(59, 125, 221, .25);
+    color: #495057;
+    outline: 0;
+}
+.email{
+    margin-bottom: 16px;
+
+}
+.email label{
+    display: block;
+    color: rgb(73, 80, 87, 0.8);
+    margin-bottom: 10px;
+}
+.email input{
+    display: block;
+    width: 100%;
+    border:1px solid rgb(73, 80, 87, 0.3 );
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.email input:focus{
+    background-color: #fff;
+    border-color: #9dbeee;
+    box-shadow: 0 0 0 .25rem rgba(59, 125, 221, .25);
+    color: #495057;
+    outline: 0;
+}
+.password label{
+    display: block;
+    color: rgb(73, 80, 87, 0.8);
+    margin-bottom: 10px;
+}
+.password{
+    margin-bottom: 16px;
+}
+.password input{
+    display: block;
+    width: 100%;
+    border:1px solid rgb(73, 80, 87, 0.3 );
+    border-radius: 3px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.password input:focus{
+    background-color: #fff;
+    border-color: #9dbeee;
+    box-shadow: 0 0 0 .25rem rgba(59, 125, 221, .25);
+    color: #495057;
+    outline: 0;
+}
+.password a{
+    color: #3b7ddd;
+    font-size: 12px;
+}
+.check-box{
+    margin-bottom: 16px;
+
+}
+.check-box label{
+    color: rgb(73, 80, 87, 0.8);
+    margin-left: 3px;
+}
+.sigin-form button{
+    width: 100%;
+    background-color: var(--promary);
+    color: #fff;
+    border-radius: 5px;   
+    padding: 6px 16px;
+    border: var(--promary);
+    font-size: 16px;
+    transition: 0.2s;
+}
+.sigin-form button:hover{
+    background-color: #29579c;
+}
+.sujetion{
+    padding: 20px;
+    text-align: center;
+    color: rgb(73, 80, 87, 0.8);
+    font-size: 14px;
+
+}
+.sujetion p{
+    display: inline-block;
+    margin-right: 5px;
+}
+.sujetion a{
+    color: #3b7ddd;
+}
