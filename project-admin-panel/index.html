@@ -1,940 +1,731 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="fonts/remixicon/remixicon.css">
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-</head>
-<body>
+:root{
+    --promary: #3b7ddd;
+    --titles:  #939ba2;
+
+  
+}
+
+ul
+{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.col-1{width: 8.33%; padding-left: 12px;padding-right: 12px;}
+.col-2{width: 16.66%; padding-left: 12px;padding-right: 12px;}
+.col-3{width: 25%; padding-left: 12px;padding-right: 12px;}
+.col-4{width: 33.33%; padding-left: 12px;padding-right: 12px;}
+.col-5{width: 41.66%; padding-left: 12px;padding-right: 12px;}
+.col-6{width: 50%;padding-right: 12px;}
+.col-7{width: 58.33%; padding-left: 12px;padding-right: 12px;}
+.col-8{width: 66.66%; padding-left: 12px;padding-right: 12px;}
+.col-9{width: 75%; padding-left: 12px;padding-right: 12px;}
+.col-10{width: 83.33%; padding-left: 12px;padding-right: 12px;}
+.col-11{width: 91.66%; padding-left: 12px;padding-right: 12px;}
+.col-12{width: 100%; padding-left: 12px;padding-right: 12px;}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.img-fluid{
+    max-width: 100%;
+    display: inline-block;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+.d-flex{
+    display: flex;
+}
+.relative{
+    position: relative;
+}
+.d-block{
+    display: block;
+ }
+ .d-none{
+     display: none;
+ }
+
+ body{
+    font-family: 'Signika';
+    position: relative;
+ }
+
+ 
+/* HEADER */
+
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    background-color: #fff;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(33, 37, 41, 0.1) 0px 0px 32px 0px;
+    z-index: 999;
+}
+
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header ul:first-child li{
+    margin-right: 15px;
+}
+header ul:last-child li{
+    margin-right: 20px;
+}
+header ul:last-child li:last-child{
+    margin-right: 0px;
+}
+header:last-child li a i{
+     color: var(--titles);
+}
+
+header input{
+    border-radius: 30px ;
+    border: none;
+    background-color: #f3f6fa;
+    padding: 10px 15px;
+    position: relative;
+}
+.menu-icon a i{
+    font-size: 30px;
+    color: #242e3d;
+}
+.ri-search-line{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: var(--titles);
+
+}   
+.mega-menu{
+    display: flex;
+    align-items: center;
+    font-family: 'Signika';
+    color: var(--titles);
+}
+.mega-menu a{
+    margin-right: 8px;
+    font-family: 'Signika';
+    color: rgb(171 176 183);
+}
+
+
+.ul-{
+   color: var(--titles);
+}
+.us-flag{
+    border-radius: 50%;
+}
+.profile-img{
+    border-radius: 5px;
+}
+
+
+
+
+
+main{  
+     background-color: #F5F7FB;
+     width: 85%;
+     padding: 120px 50px 50px 50px;
+     margin-left: auto;
+}
+.analytics .col-6{
+    margin-left: 0px;
+}
+.analytics-title{
+    margin-bottom: 20px;
+}
+.analytics-title ul li h3{
+    font-weight: 400;
+    line-height: 25.2px;
+    font-size: 21px;
+}
+.analytics-title ul li:last-child a:first-child{
+    padding: 8px 15px;
+    color: rgb(52, 58, 64);
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.analytics-title ul li:last-child a:last-child{
+    padding: 8px 13px;
+    color: #fff;
+    background-color: var(--promary);
+    border-radius: 5px;
+}
+
+.analytics-cards{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 .875rem 0 rgba(33, 37, 41, .05);
+    margin-bottom: 24px;
+}
+.analytics-cards .row{
+    padding: 0 !important;
+}
+.analytics-icon{
+    padding: 10px 12px;
+    background-color: #d3e2f7;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--promary);
+}
+
+.analytics-cards ul li:first-child h6{
+    color: #939ba2;
+    font-size: .925rem;
+    font-weight: 600;
+}
+.analytics-cards h3{
+    color: #000;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 4px 0 16px 0;
+}
+.analytics-cards p{
+    color: #5d666e;
+    font-size: 15px;
+    /* opacity: 0.5; */
+}
+.analytics-cards p span{
+    color: #3b7ddd;
+    background-color: #3b7ddd26;
+    padding: 3px 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.col-6:nth-child(2) .analytics-cards p span{
+    color: #1cbb8c;
+    background-color: rgba(28, 187, 140, .15);
+}
+.col-6:nth-child(3) .analytics-cards p span{
+    color: #1cbb8c;
+    background-color: rgba(28, 187, 140, .15);
+}
+.col-6:last-child .analytics-cards p span{
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, .15);
+
+}
+.analytics-item{
+    background-color: #fff;
+    margin-left: 10px;
+    box-shadow: 0 0 .875rem 0 rgba(33, 37, 41, .05);
+    padding: 15px;     
+    height: 500px;
+    margin-bottom: 30px;
+}
+#chart-1{
+    height: 230px;
+    background-color: white;
+}
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 0.001s;
+}
+.graph{
+    padding: 10px;
+    background-color: #fff;
+}
+.graph .graph-header .graph-heade-1 h5{
+    font-family: 'Dosis';
+    color: #525659;
+    font-size: 15px;
+    opacity: 0.5;
+    border: none;
+}
+.graph .graph-header .graph-heade-2 select ,.graph .graph-header .graph-heade-2 input{
+    font-family: 'Dosis';
+    color: #222e3c;
+    border: none;
+    margin-bottom: 10px;
+    background-color:#f5f7fb;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+  
+  .calendar-container {
+    height: 500px;
+    width: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+    padding: 10px;
+  }
+  
+  .calendar-week {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding-inline-start: 0px;
+  }
+  
+  .calendar-week-day {
+    width: 100%;
+    text-align: center;
+    color: #525659;
+  }
+  
+  .calendar-days {
+    margin-top: 30px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    padding-inline-start: 0px;
+  }
+  
+  .calendar-day {
+    text-align: center;
+    color: #525659;
+    padding: 10px;
+  }
+  
+  .calendar-month-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .calendar-month-year-container {
+    padding: 10px 10px 20px 10px;
+    color: #525659;
+    cursor: pointer;
+  }
+  
+  .calendar-arrow-container {
+    margin-top: -5px;
+  }
+  
+  .calendar-left-arrow,
+  .calendar-right-arrow {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #525659;
+  }
+  
+  .calendar-today-button {
+    margin-top: -10px;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #525659;
+    padding: 5px 10px;
+  }
+  
+  .calendar-today-button {
+    height: 20px;
+    margin-right: 10px;
+    background-color: var(--promary);
+    color: white;
+  }
+  
+  .calendar-months,
+  .calendar-years {
+    flex: 1;
+    border-radius: 10px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #525659;
+    font-size: 15px;
+  }
+  
+  .calendar-day-active {
+    background-color: var(--promary);
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .map-heade ul li:first-child p{
+    font-family: 'Dosis';
+    color: #222e3c;
+    font-weight: 500;
+    opacity: 0.5;
+  }
+  .map-container {
+    padding: 2rem .8rem;
+    position: relative;
+    display: inline-block;
+    height: 450px;
+    background-color: #fff;     
+    .point {
+      cursor: pointer;
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      background-color:  var(--promary);
+      border-radius: 50%;
+      transition: all .3s ease;
+      will-change: transform, box-shadow;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 0 rgba(--promary, 0.4);
+      animation: pulse 3s infinite;
+    }
+      .point:hover {
+        animation: none;
+        transform:  translate(-50%, -50%) scale3D(1.35, 1.35 ,1);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+    .venezuela { top: 54%; left: 24%; }
+    .brasil { top: 64%; left: 28%; }
+    .argentina { top: 77%; left: 27%; }
+    .colombia { top: 55%; left: 21%; }
+    .panama { top: 51%; left: 18%; }
+    .mexico { top: 38%; left: 12%; }
+    .usa { top: 26%; left: 17%; }
+    .arabia { top: 40%; left: 53%; }
+    .turquia { top: 31%; left: 57%; }
+    .rusia { top: 16%; left: 67%; }
+    .china { top: 40%; left: 72%; }
+    .japon { top: 34%; left: 86%; }
+    .australia { top: 72%; left: 86%; }
+  }
+  
+.apexcharts-legend.apx-legend-position-right{
+    display: none;
+}
+.analytics-item ul li:nth-child(2) ul li div{
+    background-color: rgb(252, 185, 44);
+} 
+.analytics-item ul li:nth-child(3) ul li div{
+    background-color: rgb(220, 53, 69);
+} 
+.analytics-item ul li:last-child ul li div{
+    background-color: rgb(33, 37, 41);
+} 
+.analytics-item ul li:first-child ul li p span{
+    color: #1cbb8c;
+    background-color: rgba(28, 187, 140, .15);
+    padding: 1px 2px;
+    border-radius: 2px;
+} 
+.analytics-item ul li:nth-child(2) ul li p span{
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, .15); 
+    padding: 1px 2px;
+    border-radius: 2px;
+} 
+
+.analytics-item ul li ul li div{
+    width: 15px;
+    height: 15px;
+    background-color: var(--promary);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.analytics-item ul li ul{
+    border-bottom: rgb(28, 29, 29, 0.1) 1px solid;
+    padding: 15px;
+}
+.analytics-item ul li ul li p{
+    font-size: 14px;
+    opacity: 0.8;
+    color: #2b3947;
+}
+.analytics-item ul li ul li{
+    align-items: center;
+}
+.analytics-item table{
+    width: 100%;
+}
+.analytics-item table tr td, .analytics-item table tr th {
+    padding: 10px 0;
+}
+.analytics-item table tr td h3{
+    color: #2b3947;
+    opacity: 0.8;
+    font-size: 16px;
+}
+.analytics-item table tr td a{
+    padding: 8px 10px;
+    background-color: rgb(245, 247, 251);
+    border-radius: 5px;
+    color: #525659;
+    transition: 0.2s;
+}
+.analytics-item table tr td a:hover{  
+      background-color: rgb(201, 202, 204);
+
+}
+.analytics-item table tr td p{
+    color: #2b3947;
+    opacity: 0.8;
+}
+.analytics-item table tr td ul li:first-child img{
+    padding: 8px;
+    background-color: rgb(73, 80, 87, 0.1);
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.analytics-item table tr th{
+    text-align: start;
+    color: #2b3947;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+.progress{
+    width: 100px;
+     background-color: #a5f1db;
+     height: 7px;
+    border-radius: 5px;
+}
+.progress-bar{
+    width: 65%;
+     background-color: rgb(28, 187, 140);
+     height: 100%;
+     border-radius: 5px 0 0 5px;
+}
+
+
+
+aside::-webkit-scrollbar {
+    width: .8rem;
+}
+aside::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+aside::-webkit-scrollbar-thumb {
+    background-color: #adb5bd;
+    border-radius: 10px;
+} 
+aside {
+    width: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    background-color: #222e3c;
+    color: white;
+}
+.logo{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+aside .logo a{
+   color: white;
     
-    <aside>
-        <div class="logo"> 
-        <a href="javascript:void(0) ">AdminKit  </a><span>PRO</span>
-   
-        </div>
-   
-        <ul class="d-flex align-items-center">
-         <li><a href="javascript:void(0)"><img src="img/profile-photo.jpg" alt="us-flag" width="40px" class="profile"></a></li>
-         <li>
-           
-           <div class="user-data">
-             <a href="javascript:void(0)">Charles Hall <i class="ri-arrow-down-s-line"></i> </a>
-           <p>Designer</p>
-           </div>
-           
-         </li>
-        
-        </ul>
-   
-        <div class="page">
-         <ul>
-           <li>
-             <h4>Page</h4>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between">
-                  <li>
-                   <i class="ri-sound-module-fill"></i>  <span>Dashbord</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                  
-                </ul>
-            </a>
-            <div class="answer d-none">
-              <ul>
-                <li>
-                  <a href="javascript:vold(0)">
-                    <ul class="d-flex justify-between  ">
-                       <li>
-                        <i class="ri-arrow-right-line"></i> <span>Analytics</span></li>
-                    </ul>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:vold(0)">
-                    <ul class="d-flex justify-between  ">
-                       <li>
-                        <i class="ri-arrow-right-line"></i> <span>E-commerce</span></li>
-                        <li><span class="pro">PRO</span></li>
-                    </ul>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:vold(0)">
-                    <ul class="d-flex justify-between  ">
-                       <li>
-                        <i class="ri-arrow-right-line"></i> <span>Crypto</span></li>
-                        <li><span class="pro">PRO</span></li>
+}
+aside > ul{
+    margin:10px;
+}
+.user-data{
+    margin-left: 10px;
+}
+.user-data a{
+    color: white;
+}
+.user-data p{
+    color: #adb5bd;
+    font-size: 16px;
+}
+.page > ul > li:nth-child(2){
+    background: linear-gradient(90deg, rgba(59, 125, 221, .1), rgba(59, 125, 221, .088) 50%, transparent);
+    border-left: 2px solid #3b7ddd;
+    color: #e9ecef;
+}
+.pro, .icon{
+    border-radius: 5px;
+    padding: 4px ;
+    font-size: 12px;
+    font-weight: 400;
+}
+.pro{
+    background-color: #3b7ddd; 
+    color: white;
+}
+.icon{
+    background-color: white;  
+    color: black;
+}
+.logo span{
+    background-color: #3b7ddd; 
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    transform: translateY(-8px);
+    display: inline-block;
+}
+.component{
+    margin: 20px 0px;
+}
+h4{
+    font-size: 15px;
+    font-weight: 300;
+}
+.page ul li:nth-child(2) a{
+    color: white;
+    font-size: 16px;
+}
+.page ul li:nth-child(2) , .component ul li:nth-child(2) p, .plugins ul li:nth-child(2) p{
+    font-size: 16px;
+     color: #adb5bd;
+}
+
+.page ul li, .component ul li, .plugins ul li{
+    color: #adb5bd;
+     padding: 6px 0px 6px 8px;
+     margin-right: 5px;
+    margin-left: 3px;
+}
+.page ul li:hover, .component ul li:hover, .plugins ul li:hover{
+    color: #dbe3eb;
     
-                    </ul>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-layout-5-line"></i><span>Page</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 
-               </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Settings</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Projects</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Clients</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Orders</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Pricing</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Chat</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Black Page</span></li>
-                       
-     
-                     </ul>
-                   </a>
-                 </li>
-               </ul>
-            </div>
-           </li>
-           <li>
-             <a href="javascript:vold(0)">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-user-3-line"></i>  <span>Profile</span></li>
-               </ul>
-             </a>
-           </li>
-           <li>
-             <a href="javascript:vold(0)">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-layout-bottom-line"></i>  <span>Invoice</span></li>
-               </ul>
-             </a>
-           </li>
-           <li>
-             <a href="javascript:vold(0)">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-list-check"></i> <span>Task</span></li>
-                   <li><span class="pro">PRO</span></li>
-               </ul>
-             </a>
-           </li>
-           <li>
-             <a href="javascript:vold(0)">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-calendar-2-line"></i>  <span>Calender</span></li>
-                   <li> <span class="pro">PRO</span></li>
-                 
-               </ul>
-             </a>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between ">
-                 <li><i class="ri-group-line"></i>  <span>Auth</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Sign In</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Sign Up</span></li>
-                         
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Reset Password</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>404 Page</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>500 Page</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-               </ul>
-             </div>
-           </li>
-         </ul>
-        </div>
-   
-        <div class="component">
-         <ul>
-           <li>
-             <h4>Components</h4>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between ">
-                 <li>
-                   <i class="ri-briefcase-5-line"></i> <span>UI Elements</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 
-               </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Alert</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Buttons</span></li>
-                         
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Cards</span></li>
-                        
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>General</span></li>
-                        
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Grid</span></li>
-                        
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Models</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Offcanvas</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>placeholders</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Tabs</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Typography</span></li>
-                     </ul>
-                   </a>
-                 </li>
-               </ul>
-             </div>
-           </li>
-           <li>
-             <a href="javascript:vold(0)">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-cup-line"></i>  <span>Icon</span></li>
-                   <li> <span class="icon">1500 +</span></li>
-     
-               </ul>
-             </a>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between ">
-                 <li>
-                   <i class="ri-task-line"></i> <span>From</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 
-               </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Basic inputs</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Form  Layouts</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Input Groups</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-               </ul>
-             </div>
-           </li>
-           <li>
-             <a href="javascript:vold(0)">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-list-check"></i>  <span>Table</span></li>
-                 
-               </ul>
-             </a>
-           </li>
-         </ul>
-        </div>
-   
-        <div class="plugins">
-         <ul>
-           <li>
-             <h4>	Plugins & Addons</h4>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between ">
-                 <li>
-                   <i class="ri-task-line"></i> <span>Form Plugins</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 
-               </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Advanced Inputs</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Editors</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Validation</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-               </ul>
-             </div>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between">
-                 <li>
-                   <i class="ri-list-check"></i> <span>Data Tables</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 
-               </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Responsive Table</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Table With Bottons</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Columns Search</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Fixed Header</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Multi Section</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Ajax Sourced Data</span></li>
-                         <li><span class="pro">PRO</span></li>
-     
-                     </ul>
-                   </a>
-                 </li>
-               </ul>
-             </div>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between">
-                 <li>
-                   <i class="ri-bar-chart-line"></i> <span>Charts</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 
-               </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>chart.js</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Apaxcharts</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-               
-               </ul>
-             </div>
-           </li>
-           <li>
-         
-             <a href="javascript:vold(0)">
-               <ul class="d-flex justify-between  ">
-                 <li>
-                   <i class="ri-notification-3-line"></i><span>Notifications</span></li>
-                   <li> <span class="pro">PRO</span></li>
-               </ul>
-             </a>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between">
-                 <li>
-                   <i class="ri-map-line"></i> <span>Maps</span></li>
-               </ul>
-             </a>
-             <div class="answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Google Maps</span></li>
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Vector Maps</span></li>
-                         <li><span class="pro">PRO</span></li>
-                     </ul>
-                   </a>
-                 </li>
-               
-               </ul>
-             </div>
-           </li>
-           <li class="dropdawn">
-             <a href="javascript:vold(0)" class="slide">
-               <ul class="d-flex justify-between">
-                 <li>
-                   <i class="ri-corner-right-down-line"></i> <span>Multi Lavel</span></li>
-                   <li><i class="ri-arrow-down-s-line"></i></li>
-                 
-               </ul>
-             </a>
-             <div class=" answer d-none">
-               <ul>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Two Lavel</span></li>
-                     <li><i class="ri-arrow-down-s-line"></i></li>
-                         
-                     </ul>
-                   </a>
-                 </li>
-                 <li>
-                   <a href="javascript:vold(0)">
-                     <ul class="d-flex justify-between  ">
-                        <li>
-                         <i class="ri-arrow-right-line"></i> <span>Three Lavel</span></li>
-                     <li><i class="ri-arrow-down-s-line"></i></li>
-     
-                        
-                     </ul>
-                   </a>
-                 </li>
-               
-               </ul>
-             </div>
-           </li>
-           
-         </ul>
-        </div>
-   
-        <div class="weekly-sales">
-           <h5>Weekly Sales Report</h5>
-           <p>Your weekly sales report is ready for download!</p>
-           <a href="javascript:void(0)">Download</a>
-           
-        </div>
-   
-     </aside>
+}
+.page ul li:nth-child(2) a ul li{
+    color:  white;
+}
+.page span, .component span, .plugins span{
+    margin-left: 10px;
+}
 
-    <header>
-        <ul>
-            <li class="menu-icon"><a href="javascript:void(0)"><i class="ri-menu-2-line"></i></a></li>
-            <li> <form><input type="text" placeholder="Serch.." class="serch-bar-header"><i class="ri-search-line serch-icon"></i></form></li>
-            <li class="mega-menu"><a href="javascript:void(0)">Mega menu</a><i class="ri-arrow-drop-down-line"></i></li>
-            <li class="mega-menu"><a href="javascrpit:void(0)">Resorces</a><i class="ri-arrow-drop-down-line"></i></li>
-        </ul>
-        <ul>
-            <li><a href="javascript:void(0)" class="ul-"><i class="ri-notification-3-line"></i></a></li>
-            <li><a href="javascript:void(0)" class="ul-"><i class="ri-chat-4-line"></i></a></li>
-            <li><a href="javascript:void(0)"><img src="img/flag.png" alt="" width="20px" height="20px" class="us-flag"></a></li>
-            <li><a href="javascript:void(0)" class="ul-"><i class="ri-fullscreen-line"></i></a></li>
-            <li><a href="javascript:void(0)"><img src="img/profile-photo.jpg" alt="" width="40px" height="40px" class="profile-img"></a></li>
-        </ul>
-    </header>
-    
-    <main>
-       
-    <div class="analytics-title">
-  <ul class="row ">
-    <li><h3><strong>Analytics</strong> Dashboard</h3></li>
-    <li>
-      <a href="javascript:void(0)">Invite a fraind</a>
-      <a href="javascript:void(0)">New Project</a>
-    </li>
-  </ul>
-    </div>
 
-    <div class="analytics">
-      <div class="row">
-        <div class="col-5">
-          <div class="row">
-            <div class="col-6">
-                <div class="analytics-cards">
-                 <ul class="row">
-                    <li><h6>Sales</h6> </li>
-                    <li class="analytics-icon"><i class="ri-truck-line"></i></li>
-                 </ul>
-                 <h3>2.382</h3>
-                 <p><span>-3.65%</span>Since last week</p>
-               </div>
-            </div>
-            <div class="col-6">
-                <div class="analytics-cards">
-                 <ul class="row">
-                    <li><h6>Earnings</h6> </li>
-                    <li class="analytics-icon"><i class="ri-money-dollar-circle-line"></i></li>
-                 </ul>
-                 <h3>$21.300</h3>
-                 <p><span>6.65%</span>Since last week</p>
-               </div>
-            </div>
-            <div class="col-6">
-                <div class="analytics-cards">
-                 <ul class="row">
-                    <li><h6>Sales</h6> </li>
-                    <li class="analytics-icon"><i class="ri-group-line"></i></li>
-                 </ul>
-                 <h3>14.212</h3>
-                 <p><span>5.25%</span>Since last week</p>
-               </div>
-            </div>
-            <div class="col-6">
-                <div class="analytics-cards">
-                 <ul class="row">
-                    <li><h6>Sales</h6> </li>
-                    <li class="analytics-icon"><i class="ri-shopping-cart-line"></i></li>
-                 </ul>
-                 <h3>64</h3>
-                 <p><span>-2.25%</span>Since last week</p>
-               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-7"> 
-          <div class="graph">
-            <div class="graph-header row">
-              <div class="graph-heade-1"><h5>Recent Movment</h5></div>
-              <div class="graph-heade-2">
-                <select class="">
-                <option>Jan</option>
-                <option value="1">Feb</option>
-                <option value="2">Mar</option>
-                <option value="3">Apr</option>
-              </select>
-                <input type="text" class="form-control form-control-sm bg-light rounded-2 border-0" style="width: 100px;"placeholder="Search.."></div>
-              
-            </div>
-            <div id="chart-1"></div>
-          </div>
-        </div>
-        <div class="col-3">
-        
-          <div class="calendar-container">
-            <div class="calendar-month-arrow-container">
-              <div class="calendar-month-year-container">
-                <select class="calendar-years"></select>
-                <select class="calendar-months">
-                </select>
-              </div>
-              <div class="calendar-month-year">
-              </div>
-              <div class="calendar-arrow-container">
-                <button class="calendar-today-button"></button>
-                <button class="calendar-left-arrow">
-                  ← </button>
-                <button class="calendar-right-arrow"> →</button>
-              </div>
-            </div>
-            <ul class="calendar-week">
-            </ul>
-            <ul class="calendar-days">
-            </ul>
-          </div> <!-- end container -->
-        </table>
-      </div>
-        <div class="col-6">
-         <div class="analytics-item">
-          <div class="map-heade">
-            <ul class="row"><li><p>Real-Time</p></li>
-            <li><i class="ri-more-line"></i></li></ul>
-          </div>
-          <div class="map-container">
-            <img src="http://res.cloudinary.com/slzr/image/upload/v1500321012/world-map-1500_vvekl5.png" class="img-fluid">
-            <div class="point venezuela tippy" title="Venezuela"></div>
-            <div class="point brasil tippy" title="Brasil"></div>
-            <div class="point argentina tippy" title="Argentina"></div>
-            <div class="point colombia tippy" title="Colombia"></div>
-            <div class="point panama tippy" title="Panamá"></div>
-            <div class="point mexico tippy" title="Mexico"></div>
-            <div class="point usa tippy" title="Estados Unidos"></div>
-            <div class="point arabia tippy" title="Arabia Saudi"></div>
-            <div class="point turquia tippy" title="Turquía"></div>     
-            <div class="point rusia tippy" title="Rusia"></div>
-            <div class="point china tippy" title="China"></div>
-            <div class="point japon tippy" title="Japon"></div>
-            <div class="point australia tippy" title="Australia"></div>
-          </div>
-         </div>
-      </div>
-        <div class="col-3">
-          <div class="analytics-item">
-            <ul class="row">
-              <li>Browser Usage</li>
-              <li><i class="ri-more-line"></i></li>
-            </ul>
-          <div id="chart-2"></div>
-        <ul>
-          <li>
-            <ul class="row">
-            <li class="row"><div></div> <p>Chrome <span>+12%</span></p> </li>
-            <li><p>4306</p></li>
-           </ul>
-          </li>
-          <li>
-            <ul class="row">
-            <li class="row"><div></div> <p>Firefox <span>-3%</span></p> </li>
-            <li><p>3801</p></li>
-           </ul>
-          </li>
-          <li>
-            <ul class="row">
-            <li class="row"><div></div> <p>Edge</p> </li>
-            <li><p>1689</p></li>
-           </ul>
-          </li>
-          <li>
-            <ul class="row">
-            <li class="row"><div></div> <p>Other</p> </li>
-            <li><p>3251</p></li>
-           </ul>
-          </li>
-        </ul>
-        </div>
-        </div>
-        <div class="col-9">
-          <div class="analytics-item">
-            <ul class="row">
-              <li>Browser Usage</li>
-              <li><i class="ri-more-line"></i></li>
-            </ul>
-            <table>
-              <tr>
-                <th>Name</th>
-                <th>Company</th>
-                <th>Authoer</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-              <tr>
-                <td><ul class="d-flex"><li><img src="img/brand-1.svg" alt=""></li><li><h3>Project Apollo</h3> <p>Web, UI/UX Design</p></li></ul></td>
-                <td><h3>Lechters</h3> <p>Real Estate</p></td>
-                <td><h3>Vanessa Tucker</h3> <p>HTML, JS, React</p></td>
-                <td><p>65%</p><div class="progress"><div class="progress-bar"></div></div></td>
-                <td><a href="">View</a></td>
-              </tr>
-              <tr>
-                <td><ul class="d-flex"><li><img src="img/brand-2.svg" alt=""></li><li><h3>Project Bongo</h3> <p>Web</p></li></ul></td>
-                <td><h3>Cellophane Transportation</h3> <p>William Harris</p></td>
-                <td><h3>Transportation</h3> <p>HTML, JS, Vue</p></td>
-                <td><p>33%</p><div class="progress red-bg"><div class="progress-bar red"></div></div></td>
-                <td><a href="">View</a></td>
-              </tr>
-              <tr>
-                <td><ul class="d-flex"><li><img src="img/brand-3.svg" alt=""></li><li><h3>Project Canary</h3> <p>Web, UI/UX Design</p></li></ul></td>
-                <td><h3>Clemens</h3> <p>Insurance</p></td>
-                <td><h3>Sharon Lessman</h3> <p>HTML, JS, Laravel</p></td>
-                <td><p>50%</p><div class="progress yellow-bg"><div class="progress-bar yellow"></div></div></td>
-                <td><a href="">View</a></td>
-              </tr>
-              <tr>
-                <td><ul class="d-flex"><li><img src="img/brand-4.svg" alt=""></li><li><h3>Project Edison</h3> <p>UI/UX Design</p></li></ul></td>
-                <td><h3>Affinity Investment Group</h3> <p>Finance</p></td>
-                <td><h3>Vanessa Tucker</h3> <p>HTML, JS, React</p></td>
-                <td><p>80%</p><div class="progress green-bg"><div class="progress-bar green"></div></div></td>
-                <td><a href="">View</a></td>
-              </tr>
-              <tr>
-                <td><ul class="d-flex"><li><img src="img/brand-5.svg" alt=""></li><li><h3>Project Indigo</h3> <p>Web, UI/UX Design</p></li></ul></td>
-                <td><h3>Konsili</h3> <p>Retail</p></td>
-                <td><h3>Christina Mason</h3> <p>HTML, JS, Vue</p></td>
-                <td><p>78%</p><div class="progress blue-bg"><div class="progress-bar blue"></div></div></td>
-                <td><a href="">View</a></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="analytics-item">
-            <ul class="row">
-              <li>Browser Usage</li>
-              <li><i class="ri-more-line"></i></li>
-            </ul>
-            <div id="chart-3"></div>  
-          </div>
-        </div>
-      </div>
-    </div>
+.weekly-sales{
+    margin: 22px;
+    padding: 14px;
+    background-color: #2b3947;
+}
 
-    </main>
+.weekly-sales h5{
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    margin-right: 5px;
 
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/apexcharts.min.js"></script>
-    <script src="js/chart-1.js"></script>
-    <script src="js/chart-2.js"></script>
-    <script src="js/chart-3.js"></script>
-    <script src="js/calender.js"></script>
-    <script>
+}
+.weekly-sales p{
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.weekly-sales a{
+    display:inline-block;
+    text-align: center;
+    border-radius: 3px;
+    display: block;
+    padding: 5px;
+    border: 2px solid #3b7ddd;
+    color: #3b7ddd;
+}
+.weekly-sales a:hover{
+    background-color: #3b7ddd;
+    color: white;
+    border: none;
+    background-image: none;
+}
+.answer a ul li:first-child span , .answer a ul li:first-child i{
+    color: #adb5bd;
+}
 
-$(document).ready(function(){
-    tippy('.tippy', {
-      theme: 'light',
-      size: 'big',
-      arrow: true
-    })
-});
+.red{
+    background-color: rgb(220, 53, 69); 
+    width: 33%;
+ }
+ .green{
+     background-color: rgb(28, 187, 140);
+     width: 80%;
+ }
+ .yellow{
+     background-color: rgb(252, 185, 44);
+     width: 50%;
+ }
+ .blue{
+     background-color: rgb(59, 125, 221);
+     width: 78%;
+ }
+ .red-bg{
+     background-color: #f8d8db;
+ }
+ .green-bg{
+     background-color: #a5f1db;
+ }
+ .yellow-bg{
+     background-color: #fff8e9;
+ }
+ .blue-bg{
+     background-color: #dee9f9;
+ }
 
-</script>
-    <script>
-        $(".slide").click(function(){
-            $(this).parent(".dropdawn").find(".answer").slideToggle();
-            $(this).parent(".dropdawn").prevAll(".dropdawn").find(".answer").slideUp();
-            $(this).parent(".dropdawn").nextAll(".dropdawn").find(".answer").slideUp();
-        });
-    </script>
-</body>
-</html>
+ footer{
+    width: 85%;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    margin-left: auto;
+    padding: 16px 14px 
+    ;
+ }
+footer ul li:first-child A{
+    color: rgba(73, 80, 87, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+}
+footer ul li:last-child a{
+    color: rgba(73, 80, 87, 0.75);
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+
+
+.bottom-to-top{
+    padding: 15px 15px;
+    border-radius: 50%;
+    background-color: var(--promary);
+    color: white;
+    display: inline-block;
+    bottom: 30px;
+    right: 30px;
+    position: absolute;
+    position: fixed;
+}
+.bottom-to-top a{
+    color: white;
+}
+
+
+
+#SvgjsText4958{
+    display: none;
+}
