@@ -725,6 +725,57 @@ footer ul li:last-child a{
 }
 
 
+.offcanvas{
+    width: 350px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    height: 100%;
+    position: absolute;
+    position: fixed;
+    z-index: 9999;
+}
+.offcanvas .canvas-title{
+    padding: 21px 24px;
+    border-bottom: 1px solid rgb(36, 46, 61, 0.2);
+}
+.offcanvas .canvas-title i{
+    color: #222e3c;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 3px;
+    opacity: 0.8;
+}
+.offcanvas .canvas-title .logo{
+    padding: 0;
+}
+.offcanvas .canvas-title .logo h5{
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 3px;
+}
+.canvas-body{
+    padding: 16px 24px;
+}
+.top-peragraph p{
+    color: rgb(33, 37, 41);
+    padding: 15px;
+    background-color: #d8e5f8;
+    border-radius: 5px;
+}
+.color-scheme-box{
+    padding: 16px 24px;
+}
+.color-scheme-box .default{
+    background-image: linear-gradient(-45deg, rgb(34, 46, 60) 50%, rgb(242, 244, 246) 0px);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
 
 #SvgjsText4958{
     display: none;
