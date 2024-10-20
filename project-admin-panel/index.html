@@ -37,8 +37,61 @@
                 <div class="default">
                 </div>
               </div>
+              <p>Default</p>
+            </div>
+            <div class="col-6">
+              <div class="color-scheme-box">
+                <div class="default">
+                </div>
+              </div>
+              <p>colored</p>
+            </div>
+            <div class="col-6">
+              <div class="color-scheme-box">
+                <div class="default">
+                </div>
+              </div>
+              <p>Dark</p>
+            </div>
+            <div class="col-6">
+              <div class="color-scheme-box">
+                <div class="default">
+                </div>
+              </div>
+              <p>Light</p>
             </div>
           </div>
+          <div class="color-shceme-cards">
+            <div class="color-scheme-card">
+              <h6>Sidebar layout</h6>
+              <p>Change the layout of the sidebar.</p>
+              <div class="card-buttons">
+                <a href="javascript:void(0)">Default</a>
+                <a href="javascript:void(0)">Compact</a>
+              </div>
+            </div>
+            <div class="color-scheme-card">
+              <h6>Sidebar position</h6>
+              <p>Toggle the position of the sidebar.</p>
+              <div class="card-buttons">
+                <a href="javascript:void(0)">Left</a>
+                <a href="javascript:void(0)">Right</a>
+              </div>
+            </div>
+            <div class="color-scheme-card">
+              <h6>Layout</h6>
+              <p>Toggle container layout system.</p>
+              <div class="card-buttons">
+                <a href="javascript:void(0)">Fluid</a>
+                <a href="javascript:void(0)">Boxed</a>
+              </div>
+            </div>
+          </div>
+          <div class="color-scheme-button">
+            <a href="">Get Adminkit PRO</a>
+          </div>
+
+
         </div>
       </div>
     </div> 
@@ -982,6 +1035,9 @@ $(document).ready(function(){
             $(this).parent(".dropdawn").find(".answer").slideToggle();
             $(this).parent(".dropdawn").prevAll(".dropdawn").find(".answer").slideUp();
             $(this).parent(".dropdawn").nextAll(".dropdawn").find(".answer").slideUp();
+        });
+        $(".bottom-to-top").click(function(){
+            $("offcanvas").addClass("");
         });
     </script>
 </body>
