@@ -735,6 +735,8 @@ footer ul li:last-child a{
     position: absolute;
     position: fixed;
     z-index: 9999;
+    overflow-y: scroll;
+    transform: scaleX(25px);
 }
 .offcanvas .canvas-title{
     padding: 21px 24px;
@@ -768,7 +770,21 @@ footer ul li:last-child a{
     border-radius: 5px;
 }
 .color-scheme-box{
-    padding: 16px 24px;
+    padding: 20px 40px;
+    border: 1px solid var(--promary);
+    border-radius: 5px;
+}
+.color-scheme{
+ margin-top: 15px;
+}
+.color-scheme h6{
+    font-size: 16px;
+    color: rgb(73, 80, 87, 0.8 );
+}
+.color-scheme p{
+    font-size: 14px;
+    color: rgba(73, 80, 87, 0.75);
+    margin-bottom: 10px;
 }
 .color-scheme-box .default{
     background-image: linear-gradient(-45deg, rgb(34, 46, 60) 50%, rgb(242, 244, 246) 0px);
@@ -776,7 +792,60 @@ footer ul li:last-child a{
     width: 50px;
     height: 50px;
 }
-
+.color-scheme .row .col-6:nth-child(2) .color-scheme-box .default{
+    background-image: linear-gradient(-45deg, rgb(59, 125, 221) 50%, rgb(242, 244, 246) 0px);
+}
+.color-scheme .row .col-6:nth-child(3) .color-scheme-box .default{
+    background-color: rgb(34, 46, 60);
+    background-image: none;
+}
+.color-scheme .row .col-6:last-child .color-scheme-box .default{
+    background-color: rgb(242, 244, 246);
+    background-image: none;
+}
+.color-scheme .row .col-6 p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: #525659;
+}
+.color-scheme-card{
+    padding: 16px 0;
+    border-top: 1px solid rgb(73, 80, 87, 0.2);
+    margin-bottom: 10px;
+}
+.color-scheme-card h6{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(73, 80, 87);
+}
+.color-scheme-card p{
+    color: rgba(73, 80, 87, 0.75);
+    font-size: 14px;
+    font-weight: 400;
+}
+.color-scheme-card a:first-child{
+    background-color: var(--promary);
+    padding: 6.5px 16px;
+    color: #fff;
+    border-radius: 5px;
+}
+.color-scheme-card a:last-child{
+    background-color: rgb(233, 236, 239);
+    padding: 6.5px 16px;
+    color: rgba(33, 37, 41, 0.8);
+    border-radius: 5px;
+}
+.color-scheme-button a{
+    background-color: var(--promary);
+    padding: 5px 30px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: inline-block;
+}
 #SvgjsText4958{
     display: none;
 }
