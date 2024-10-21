@@ -17,7 +17,7 @@
  
     <div class="offcanvas">
       <div class="canvas-title">
-        <i class="ri-close-large-fill"></i>
+        <a href=""><i class="ri-close-large-fill"></i></a>
         <div class="logo"> 
           </i><h5>Explore AdminKit  </h5><span>PRO</span>
         </div>
@@ -97,7 +97,7 @@
     </div> 
 
 
-    <aside>
+    <aside class="left-side">
         <div class="logo"> 
         <a href="javascript:void(0) ">AdminKit  </a><span>PRO</span>
    
@@ -757,7 +757,7 @@
    
      </aside>
 
-    <header>
+    <header class="width-lg-100">
         <ul>
             <li class="menu-icon"><a href="javascript:void(0)"><i class="ri-menu-2-line"></i></a></li>
             <li> <a href="" class="relative">
@@ -776,11 +776,11 @@
         </ul>
     </header>
     
-    <main>
+    <main class="width-lg-100">
        
     <div class="analytics-title">
   <ul class="row ">
-    <li><h3><strong>Analytics</strong> Dashboard</h3></li>
+    <li class="display-sm-none"><h3><strong>Analytics</strong> Dashboard</h3></li>
     <li>
       <a href="javascript:void(0)">Invite a fraind</a>
       <a href="javascript:void(0)">New Project</a>
@@ -790,9 +790,9 @@
 
     <div class="analytics">
       <div class="row">
-        <div class="col-5 col-lg-12">
+<div class="col-5 col-lg-12">
           <div class="row">
-            <div class="col-6">
+            <div class="col-6 col-sm-12">
                 <div class="analytics-cards">
                  <ul class="row">
                     <li><h6>Sales</h6> </li>
@@ -802,7 +802,7 @@
                  <p><span>-3.65%</span>Since last week</p>
                </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-sm-12">
                 <div class="analytics-cards">
                  <ul class="row">
                     <li><h6>Earnings</h6> </li>
@@ -812,7 +812,7 @@
                  <p><span>6.65%</span>Since last week</p>
                </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-sm-12">
                 <div class="analytics-cards">
                  <ul class="row">
                     <li><h6>Sales</h6> </li>
@@ -822,7 +822,7 @@
                  <p><span>5.25%</span>Since last week</p>
                </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-sm-12">
                 <div class="analytics-cards">
                  <ul class="row">
                     <li><h6>Sales</h6> </li>
@@ -833,8 +833,8 @@
                </div>
             </div>
           </div>
-        </div>
-        <div class="col-7 col-lg-12"> 
+</div>
+<div class="col-7 col-lg-12"> 
           <div class="graph">
             <div class="graph-header row">
               <div class="graph-heade-1"><h5>Recent Movment</h5></div>
@@ -850,10 +850,9 @@
             </div>
             <div id="chart-1"></div>
           </div>
-        </div>
-        <div class="col-3">
-        
-          <div class="calendar-container">
+</div>
+<div class="col-3 col-lg-6 margin-lg-top">
+        <div class="calendar-container">
             <div class="calendar-month-arrow-container">
               <div class="calendar-month-year-container">
                 <select class="calendar-years"></select>
@@ -875,8 +874,8 @@
             </ul>
           </div> <!-- end container -->
         </table>
-      </div>
-        <div class="col-6">
+</div>
+<div class="col-6 col-lg-12 order-lg-1">
          <div class="analytics-item">
           <div class="map-heade">
             <ul class="row"><li><p>Real-Time</p></li>
@@ -899,8 +898,8 @@
             <div class="point australia tippy" title="Australia"></div>
           </div>
          </div>
-      </div>
-        <div class="col-3">
+</div>
+<div class="col-3 col-lg-6 margin-lg-top">
           <div class="analytics-item">
             <ul class="row">
               <li>Browser Usage</li>
@@ -934,8 +933,8 @@
           </li>
         </ul>
         </div>
-        </div>
-        <div class="col-9">
+</div>
+<div class="col-9 order-lg-2 col-sm-12">
           <div class="analytics-item">
             <ul class="row">
               <li>Browser Usage</li>
@@ -986,8 +985,8 @@
               </tr>
             </table>
           </div>
-        </div>
-        <div class="col-3">
+</div>
+<div class="col-3 order-lg-3 col-sm-12">
           <div class="analytics-item">
             <ul class="row">
               <li>Browser Usage</li>
@@ -995,13 +994,13 @@
             </ul>
             <div id="chart-3"></div>  
           </div>
-        </div>
+</div>
       </div>
     </div>
 
     </main>
 
-    <footer>
+    <footer class="width-lg-100">
       <ul class="row">
         <li><a href="index.html">AdminKit &copy;</a></li>
         <li class="row">
@@ -1036,8 +1035,17 @@ $(document).ready(function(){
             $(this).parent(".dropdawn").prevAll(".dropdawn").find(".answer").slideUp();
             $(this).parent(".dropdawn").nextAll(".dropdawn").find(".answer").slideUp();
         });
-        $(".bottom-to-top").click(function(){
-            $("offcanvas").addClass("");
+        $(".bottom-to-top").click(function (){
+          $(".offcanvas").addClass("traslate-x-0");
+        });
+        $("").click(function (){
+          $(".offcanvas").addClass("traslate-x-0");
+        });
+        $("header ul li:first-child a").click(function(){
+          $("header, main, footer").toggleClass("width-lg-85");
+        });
+        $("header ul li:first-child a").click(function(){
+          $("aside").toggleClass("right-side");
         });
     </script>
 </body>
