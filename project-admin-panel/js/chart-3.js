@@ -1,72 +1,46 @@
 var options = {
-    series: [{
-    name: 'Servings',
-    data: [44, 55, 11, 47, 52, 21, 47, 60, 50, 63, 30, 65]
-  }],
-    annotations: {
-    points: [{
-      x: 'Bananas',
-      seriesIndex: 0,
-      label: {
-        borderColor: '#775DD0',
-        offsetY: 0,
-        style: {
-          color: '#fff',
-          background: '#775DD0',
-        },
-        text: 'Bananas are good',
-      }
-    }]
-  },
+  series: [{
+  name: 'Net Profit',
+  data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+},],
   chart: {
-    height: 350,
-    type: 'bar',
+  type: 'bar',
+  height: 400
+},
+plotOptions: {
+  bar: {
+    horizontal: false,
+    columnWidth: '55%',
+    endingShape: 'rounded'
   },
-  plotOptions: {
-    bar: {
-      borderRadius: 10,
-      columnWidth: '50%',
-    }
-  },
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    width: 0
-  },
-  grid: {
-    row: {
-      colors: ['#fff', '#f2f2f2']
-    }
-  },
-  xaxis: {
-    labels: {
-      rotate: -45
-    },
-    categories: ['Jan', 'Fab', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Spe', 'Oct', 'Nov', 'Dec',
-    ],
-    tickPlacement: 'on'
-  },
-  yaxis: {
-    title: {
-      text: 'Servings',
-    },
-  },
-  fill: {
-    type: 'gradient',
-    gradient: {
-      shade: 'light',
-      type: "horizontal",
-      shadeIntensity: 0.25,
-      gradientToColors: undefined,
-      inverseColors: true,
-      opacityFrom: 0.85,
-      opacityTo: 0.85,
-      stops: [50, 0, 100]
-    },
+},
+dataLabels: {
+  enabled: false
+},
+stroke: {
+  show: true,
+  width: 2,
+  colors: ['transparent']
+},
+xaxis: {
+  categories: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+},
+yaxis: {
+  title: {
+    text: '$ (thousands)'
   }
-  };
+},
+fill: {
+  opacity: 1
+},
+tooltip: {
+  y: {
+    formatter: function (val) {
+      return "$ " + val + " thousands"
+    }
+  }
+}
+};
 
-  var chart = new ApexCharts(document.querySelector("#chart-3"), options);
-  chart.render();
+var chart = new ApexCharts(document.querySelector("#chart-3"), options);
+chart.render();
