@@ -82,6 +82,7 @@ header{
     justify-content: space-between;
     box-shadow: rgba(33, 37, 41, 0.1) 0px 0px 32px 0px;
     z-index: 999;
+    transition: 0.3s;
 }
 
 
@@ -154,6 +155,7 @@ main{
      width: 85%;
      padding: 120px 50px 50px 50px;
      margin-left: auto;
+     transition: 0.3s;
 }
 .analytics .col-6{
     margin-left: 0px;
@@ -272,6 +274,14 @@ main{
     border-radius: 3px;
 }
 
+#chart-2{
+    display: flex;
+    justify-content: center;
+    height: 140px;
+}
+#chart-3{
+    width: 100%;
+}
   
   .calendar-container {
     height: 500px;
@@ -732,17 +742,20 @@ footer ul li:last-child a{
     right: 0;
     background-color: #fff;
     height: 100%;
-    position: absolute;
     position: fixed;
     z-index: 9999;
     overflow-y: scroll;
-    transform: scaleX(25px);
+    transform: translateX(100%);
+    transition: 0.5s;
 }
 .offcanvas .canvas-title{
     padding: 21px 24px;
     border-bottom: 1px solid rgb(36, 46, 61, 0.2);
 }
-.offcanvas .canvas-title i{
+.offcanvas .canvas-title a{
+    display: inline-block;
+}
+.offcanvas .canvas-title a i{
     color: #222e3c;
     font-size: 18px;
     font-weight: 400;
@@ -845,6 +858,9 @@ footer ul li:last-child a{
     border-radius: 5px;
     margin-top: 30px;
     display: inline-block;
+}
+.traslate-x-0{
+    transform: translateX(0);
 }
 #SvgjsText4958{
     display: none;
